@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .email-card {
+    @apply p-2 flex flex-col leading-4 transition-[background-color] duration-300 border-b-[1px] border-[#CCCCCC] cursor-pointer hover:bg-gray-200;
+  }
+
+  .disabled {
+    @apply disabled:!bg-container-disabled disabled:!text-white;
+  }
+
+  .disabled-outline {
+    @apply  disabled:!border-gray-200 disabled:!text-gray-200;
+  }
+}
+
+@layer base {
+  :root {
+    /**
+    *  Content  Eg: Text , icons
+    */
+    --content-default: 51 51 51;
+    --content-placeholder: 128 128 128;
+    --content-brand: 97 97 183;
+    --content-white: 255 255 255;
+    --content-error: 186 26 26;
+    --content-email-card-placeholder: 102 102 102;
+    --content-email-card-placeholder-selected: 229 229 229;
+
+    /**
+    *  Container Eg: Cards, Button
+    */
+    --container-brand: 97 97 183;
+    --container-brand-lite: 220 220 239;
+    --container-default: 252 252 252;
+    --container-disabled: 178 178 178;
+
+    /**
+    * Surfaces ===> Tailwind Equivalent prefixed bg-
+    */
+    --surface-3: 229 229 229;
+    --surface-on: 28 27 31;
+    --primitives-accordion-blue: 97 97 183;
+    --primitives-accordion-blue-80: 185 185 223;
+    --primitives-accordion-blue-95: 237 237 247;
+
+    /**
+    *  Borders
+    */
+    --border-brand: 97 97 183;
+    --border-default: 77 77 77;
+    --border-cards: 8px;
+    --border-button: 8px;
+
+    /**
+    * Spacing
+    */
+
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+.MuiButton-root {
+  text-transform: none !important;
+  border-radius: 8px !important;
+}
+
+.MuiButton-contained {
+  background-color: rgb(var(--container-brand)) !important;
+}
+
+.MuiButton-outlined {
+  border-color: rgb(var(--border-brand)) !important;
+  color: rgb(var(--content-brand)) !important;
+}
+
+/* .MuiFormLabel-root.Mui-focused {
+  color: rgb(var(--primitives-accordion-blue)) !important;
+} */
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: rgb(var(--border-brand)) !important;
+}
+
+.MuiIconButton-root {
+  padding: 2px !important;
+}
+
+.MuiTableHead-root .MuiTableRow-head {
+  background-color: rgb(var(--primitives-accordion-blue-80)) !important;
+}
+
+/* .MuiTableCell-root {
+  border-bottom: 2px solid white !important;
+} */
+
+.MuiTableCell-head {
+  background-color: inherit !important;
+  color: "white" !important;
+}
+
+.MuiTableRow-root {
+  background-color: rgb(var(--primitives-accordion-blue-95)) !important;
+}
+
+.MuiTablePagination-root {
+  background-color: rgb(var(--primitives-accordion-blue-80)) !important;
+}
+
+.MuiRadio-root.Mui-checked {
+  color: rgb(var(--content-brand));
+}
+
+.MuiCheckbox-root.Mui-checked {
+  color: rgb(var(--content-brand));
+}
+
+.tablesearch {
+  height: 35px;
+  width: 250px;
+  border-radius: 16px;
+  padding: 0px 16px;
+}
+
+.selectdisabled {
+  color: rgb(158, 158, 158);
+}
+
+.nav-link {
+  color: rgb(var(--content-default)) !important;
+}
+
+.MuiDialog-container > .MuiPaper-root {
+  min-width: 400px !important;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background: rgb(var(--container-brand-lite)) !important;
+}
+
+
+.timeline > .MuiMenu-paper{
+  background: rgb(var(--container-brand)) !important;
+}
+
+.menuinbox > .MuiPaper-root {
+  min-width: 200px !important;
+}
+
+/* .MuiTablePagination-root {
+  height:50px !important;
+  overflow:hidden;
+} */
+
+
+
+
+@media screen and (min-width: 640px) {
+  .tags > .MuiDialog-container > .MuiPaper-root {
+    width: 400px !important;
+  }
+
+  .tagsform > .MuiDialog-container > .MuiPaper-root {
+    width: 400px !important;
+  }
+
+  .projects > .MuiDialog-container > .MuiPaper-root {
+    width: 450px !important;
+  }
+  /* .opinions>.MuiDialog-container>.MuiPaper-root {
+    width: 400px !important;
+    min-height: 50%;
+  } */
+
+  .confirmation > .MuiDialog-container > .MuiPaper-root {
+    width: 350px !important;
+  }
+
+  .opinions > .MuiDialog-container > .MuiPaper-root {
+    width: 400px !important;
+  }
+}
